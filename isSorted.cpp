@@ -61,6 +61,17 @@ void testTwoElementsUnsorted() {
     int arr[] = {2, 1};
     assert(isSorted(arr, 2) == false);
 }
+// Test 9: Already sorted with larger gaps
+void testLargeGaps() {
+    int arr[] = {-100, -10, 0, 50, 1000};
+    assert(isSorted(arr, 5) == true);
+}
+
+// Test 10: Unsorted at the last pair
+void testUnsortedAtEnd() {
+    int arr[] = {1, 2, 3, 5, 4};
+    assert(isSorted(arr, 5) == false);
+}
 
 int main() {
 
@@ -72,6 +83,8 @@ int main() {
     testNegativeValues();
     testAllEqual();
     testTwoElementsUnsorted();
+    testLargeGaps();
+    testUnsortedAtEnd();
 
     cout << "All tests passed!" << endl;
 
